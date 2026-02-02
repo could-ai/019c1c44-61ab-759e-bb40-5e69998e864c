@@ -5,6 +5,7 @@ import 'screens/create_poll_screen.dart';
 import 'screens/user_dashboard.dart';
 import 'screens/vote_screen.dart';
 import 'screens/results_screen.dart';
+import 'screens/login_screen.dart';
 import 'models/poll.dart';
 
 void main() {
@@ -26,6 +27,7 @@ class VotingApp extends StatelessWidget {
       initialRoute: '/',
       routes: {
         '/': (context) => const RoleSelectionScreen(),
+        '/login': (context) => const LoginScreen(),
         '/admin': (context) => const AdminDashboard(),
         '/create_poll': (context) => const CreatePollScreen(),
         '/user': (context) => const UserDashboard(),

@@ -28,7 +28,8 @@ class RoleSelectionScreen extends StatelessWidget {
                 icon: const Icon(Icons.admin_panel_settings),
                 label: const Text('Admin'),
                 onPressed: () {
-                  Navigator.pushNamed(context, '/admin');
+                  // Redirect to login instead of direct admin access
+                  Navigator.pushNamed(context, '/login');
                 },
               ),
             ),
