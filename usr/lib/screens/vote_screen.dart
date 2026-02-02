@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
-import '../../models/poll.dart';
-import '../../services/poll_service.dart';
+import '../models/poll.dart';
+import '../services/poll_service.dart';
 
 class VoteScreen extends StatefulWidget {
   final Poll poll;

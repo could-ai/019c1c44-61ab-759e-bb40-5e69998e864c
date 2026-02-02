@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import '../../services/poll_service.dart';
+import '../services/poll_service.dart';
 
 class CreatePollScreen extends StatefulWidget {
   const CreatePollScreen({super.key});

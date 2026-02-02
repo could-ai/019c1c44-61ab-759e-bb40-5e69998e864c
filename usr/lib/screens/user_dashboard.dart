@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import '../../services/poll_service.dart';
+import '../services/poll_service.dart';
 
 class UserDashboard extends StatelessWidget {
   const UserDashboard({super.key});
