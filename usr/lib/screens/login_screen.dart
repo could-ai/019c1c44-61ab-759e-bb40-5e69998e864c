@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import '../services/auth_service.dart';
 
 class LoginScreen extends StatefulWidget {
   const LoginScreen({super.key});
@@ -22,8 +23,12 @@ class _LoginScreenState extends State<LoginScreen> {
       // Mock authentication delay
       await Future.delayed(const Duration(seconds: 1));
 
-      // Simple hardcoded check for demonstration
-      if (_usernameController.text == 'admin' && _passwordController.text == 'admin123') {
+      final success = AuthService().login(
+        _usernameController.text,
+        _passwordController.text,
+      );
+
+      if (success) {
         if (mounted) {
           Navigator.pushReplacementNamed(context, '/admin');
         }
@@ -101,7 +106,7 @@ class _LoginScreenState extends State<LoginScreen> {
                     ),
                     const SizedBox(height: 16),
                     const Text(
-                      'Hint: admin / admin123',
+                      'Default: admin / admin123',
                       style: TextStyle(color: Colors.grey),
                     ),
                   ],

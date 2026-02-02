@@ -18,6 +18,22 @@ class _AdminDashboardState extends State<AdminDashboard> {
       appBar: AppBar(
         title: const Text('Admin Dashboard'),
         backgroundColor: Colors.deepPurple.shade100,
+        actions: [
+          IconButton(
+            icon: const Icon(Icons.lock_reset),
+            tooltip: 'Change Password',
+            onPressed: () {
+              Navigator.pushNamed(context, '/change_password');
+            },
+          ),
+          IconButton(
+            icon: const Icon(Icons.logout),
+            tooltip: 'Logout',
+            onPressed: () {
+              Navigator.pushReplacementNamed(context, '/');
+            },
+          ),
+        ],
       ),
       body: ListenableBuilder(
         listenable: _pollService,

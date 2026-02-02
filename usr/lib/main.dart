@@ -6,6 +6,7 @@ import 'screens/user_dashboard.dart';
 import 'screens/vote_screen.dart';
 import 'screens/results_screen.dart';
 import 'screens/login_screen.dart';
+import 'screens/change_password_screen.dart';
 import 'models/poll.dart';
 
 void main() {
@@ -31,6 +32,7 @@ class VotingApp extends StatelessWidget {
         '/admin': (context) => const AdminDashboard(),
         '/create_poll': (context) => const CreatePollScreen(),
         '/user': (context) => const UserDashboard(),
+        '/change_password': (context) => const ChangePasswordScreen(),
       },
       onGenerateRoute: (settings) {
         if (settings.name == '/vote') {
